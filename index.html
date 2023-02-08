@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+      }
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+      .search-bar {
+        background-color: #fff;
+        border: 1px solid #333;
+        border-radius: 20px;
+        padding: 5px 10px;
+        color: #333;
+        margin-right: 20px;
+      }
+      .profile-pic {
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        background-color: #fff;
+      }
+      .video-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+       .photo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 840px;
+        margin: 0 auto;
+      }
+      .photo-grid img {
+        width: calc(25% - 20px);
+        height: auto;
+        margin: 10px;
+        border: 1px solid #333;
+        border-radius: 10px;
+      }
+      footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.events {
+  display: flex;
+  justify-content: space-between;
+}
+.event {
+  width: 30%;
+  text-align: center;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+.event img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.event:hover img {
+  transform: scale(1.1);
+}
+
+.event:hover {
+  width: 40%;
+}
+
+
+</style>
+<script> 
+	const events = document.querySelectorAll('.event');
+
+events.forEach(event => {
+  event.addEventListener('focus', () => {
+    event.style.width = '40%';
+    event.querySelector('img').style.transform = 'scale(1.1)';
+  });
+
+  event.addEventListener('blur', () => {
+    event.style.width = '30%';
+    event.querySelector('img').style.transform = 'scale(1)';
+  });
+});
+
+</script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#">Logo</a>
+      <a href="#">Browse</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+      <input type="text" class="search-bar" placeholder="Search">
+      <div>
+      <img class="profile-pic"src="profilePic.jpg" alt="Profile Picture">
+      </div>
+    </nav>
+    <section class="video-section">
+	          <iframe width="560" height="315" src="https://player.vimeo.com/video/421701998?h=cf9f261ca2?autoplay=1&loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen allow=autoplay></iframe>
+</section>
+<div class="photo-grid">
+      <img src="image1.jpg" alt="image 1"> <img src="image2.jpg" alt="image 2">
+      <img src="image3.jpg" alt="image 3">
+      <img src="image4.jpg" alt="image 4">
+      <img src="image5.jpg" alt="image 5">
+      <img src="image6.jpg" alt="image 6">
+      <img src="image7.jpg" alt="image 7">
+      <img src="image8.jpg" alt="image 8">
+      <img src="image9.jpg" alt="image 9">
+    </div>
+
+
+
+<section class="events">
+  <div class="event">
+    <img src="event1.jpg" alt="Event 1">
+    <p>Event 1</p>
+  </div>
+  <div class="event">
+    <img src="event2.jpg" alt="Event 2">
+    <p>Event 2</p>
+  </div>
+  <div class="event">
+    <img src="event3.jpg" alt="Event 3">
+    <p>Event 3</p>
+  </div>
+</section>
+
+    <footer>
+  <div class="container">
+    <p>Copyright © 2023 Your Organization Name</p>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+
