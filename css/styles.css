@@ -29,9 +29,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 100vh; min-height: 100%;
   background: rgb(253,29,45);
   background: linear-gradient(90deg, rgba(253,29,45,1) 5%, rgba(91,199,83,1) 50%, rgba(232,232,232,1) 90%); 
+}
+
+#main_video {
+  opacity: 50%; 
+  background:transparent; 
+  position: relative; 
+  height: 100%; 
+  width: 100%;
+  object-fit: fill;
 }
 
 footer {
