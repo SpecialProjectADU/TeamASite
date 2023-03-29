@@ -13,23 +13,6 @@
   border-radius: 25px;
   background-color: #fff;
 }
-.video-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh; min-height: 100%;
-  background: rgb(253,29,45);
-  background: linear-gradient(90deg, rgba(253,29,45,1) 5%, rgba(91,199,83,1) 50%, rgba(232,232,232,1) 90%); 
-}
-
-#main_video {
-  opacity: 50%; 
-  background:transparent; 
-  position: relative; 
-  height: 100%; 
-  width: 100%;
-  object-fit: fill;
-}
 
 footer {
   background-color: #333;
@@ -97,3 +80,182 @@ footer nav a {
     opacity: .5;
 }
 
+.dropdown-content {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 0 10px 10px 0;
+  padding: 12px;
+  top: 50px; /* adjust to position the dropdown */
+  left: -8px; /* adjust to position the dropdown */
+}
+
+.dropdown-content a {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  padding: 6px 0;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.input-container {
+  display: flex;
+  width: 550px;
+  height: 50px;
+  border-radius: 0 25px 25px 0;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type=text] {
+  flex: 1;
+  padding: 0 20px;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: #333;
+  outline: none;
+}
+
+button[type=submit] {
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.dropbtn {
+  font-size: 16px;
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  padding: 13px 17px;
+  border-radius: 25px 0 0 25px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 6px 0;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a i {
+  margin-right: 12px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-right: 20px;
+  
+}
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 90vh; min-height: 100%; */
+  /* background: rgb(253,29,45);
+  background: linear-gradient(90deg, rgba(253,29,45,1) 5%, rgba(91,199,83,1) 50%, rgba(232,232,232,1) 90%); */
+  background-image: linear-gradient(
+  45deg,
+  hsl(356deg 58% 45%) 0%,
+  hsl(356deg 60% 45%) 7%,
+  hsl(356deg 63% 46%) 15%,
+  hsl(356deg 65% 46%) 23%,
+  hsl(356deg 68% 46%) 32%,
+  hsl(19deg 47% 46%) 41%,
+  hsl(53deg 31% 42%) 51%,
+  hsl(107deg 32% 48%) 60%,
+  hsl(148deg 88% 38%) 69%,
+  hsl(143deg 49% 52%) 78%,
+  hsl(144deg 48% 59%) 86%,
+  hsl(145deg 49% 65%) 93%,
+  hsl(147deg 50% 70%) 100%
+  );
+  /* https://www.joshwcomeau.com/gradient-generator/ */
+  /* https://cssgradient.io/ */
+}
+
+#main_video {
+  
+  opacity: 50%;
+  background:transparent;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.inner-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.55); 
+  z-index: 0;
+}
+.video-overlay {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#search-bar{
+  background-color: rgb(255, 255, 255);
+}
